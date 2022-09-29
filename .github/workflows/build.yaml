@@ -1,0 +1,21 @@
+name: Octo Organization CI
+
+on:
+  push:
+
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up job
+        run: pip install pyinstaller
+      - name: Run pyinstaller
+        run: |
+          pyinstaller -F -w bgreplace.py
+          git add .
+          git commit -m "Build with pyinstaller"
+          git push
