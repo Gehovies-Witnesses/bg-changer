@@ -19,3 +19,6 @@ jobs:
           git add .
           git commit -m "Build with pyinstaller"
           git push
+      - uses: actions/upload-artifact@v2
+        with:
+          path: dist/*
