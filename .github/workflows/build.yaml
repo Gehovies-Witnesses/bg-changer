@@ -1,4 +1,4 @@
-name: Octo Organization CI
+name: Build Windows executable with PyInstaller
 
 on:
   push:
@@ -13,12 +13,8 @@ jobs:
 
       - name: Set up job
         run: pip install pyinstaller
-      - name: Run pyinstaller
-        run: |
-          pyinstaller -F -w bgreplace.py
-          git add .
-          git commit -m "Build with pyinstaller"
-          git push
+      - name: Build
+        run: pyinstaller -F -w bgreplace.py
       - uses: actions/upload-artifact@v2
         with:
           path: dist/*
