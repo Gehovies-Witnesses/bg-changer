@@ -9,7 +9,7 @@ print(username)
 # define location of directories to modify
 themes_dir = "C:\\Users\\"+username+"\\AppData\\Roaming\\Microsoft\\Windows\\Themes"
 cached_dir = themes_dir+"\\CachedFiles"
-new_file = "C:\\Users\\"+username+"\\Desktop\\bg.jp*"
+new_file = "C:\\Users\\"+username+"\\Desktop\\bg.jpg"
 if os.path.exists(new_file):
   pass
 else:
