@@ -13,7 +13,7 @@ new_file = "C:\\Users\\"+username+"\\Desktop\\bg.jp*"
 if os.path.exists(new_file):
   pass
 else:
-  new_file = f"{os.path.dirname(os.path.realpath(sys.argv[0]))}\\*.jp*"
+  new_file = f"{os.path.dirname(os.path.realpath(sys.argv[0]))}\\bg.jp*"
 
 transcoded_wp_file_path = themes_dir+"\\TranscodedWallpaper"
 
