@@ -9,16 +9,17 @@ print(username)
 # define location of directories to modify
 themes_dir = "C:\\Users\\"+username+"\\AppData\\Roaming\\Microsoft\\Windows\\Themes"
 cached_dir = themes_dir+"\\CachedFiles"
-new_file = "C:\\Users\\"+username+"\\Desktop\\bg.jpg"
+new_file = "C:\\Users\\"+username+"\\Desktop\\bg.jp*"
+if os.path.exists(new_file):
+  pass
+else:
+  new_file = f"{os.path.dirname(os.path.realpath(sys.argv[0]))}\\*.jp*"
+
 transcoded_wp_file_path = themes_dir+"\\TranscodedWallpaper"
 
 cached_wp_file = [f for f in os.listdir(cached_dir)][0]
 cached_wp_file_path = cached_dir+"\\"+cached_wp_file
 
-
-#remove default files
-#os.remove(transcoded_wp_file_path)
-#os.remove(cached_wp_file_path)
 
 #copy new background to directories
 copyfile(new_file, transcoded_wp_file_path)
