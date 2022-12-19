@@ -18,3 +18,16 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           path: dist/*
+  buildx:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up job
+        run: pip install pyinstaller
+      - name: Build
+        run: pyinstaller -F -w bgreplacex.py
+      - uses: actions/upload-artifact@v2
+        with:
+          path: distx/*
