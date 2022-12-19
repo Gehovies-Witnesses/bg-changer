@@ -9,11 +9,11 @@ print(username)
 # define location of directories to modify
 themes_dir = "C:\\Users\\"+username+"\\AppData\\Roaming\\Microsoft\\Windows\\Themes"
 cached_dir = themes_dir+"\\CachedFiles"
-new_file = "C:\\Users\\"+username+"\\Desktop\\bgx.jpg"
+new_file = "C:\\Users\\"+username+"\\Desktop\\bg.jpg"
 if os.path.exists(new_file):
   pass
 else:
-  new_file = f"{os.path.dirname(os.path.realpath(sys.argv[0]))}\\bgx.jp*"
+  new_file = f"{os.path.dirname(os.path.realpath(sys.argv[0]))}\\bg.jp*"
 
 transcoded_wp_file_path = themes_dir+"\\TranscodedWallpaper"
 
