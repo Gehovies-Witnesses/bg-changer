@@ -27,7 +27,7 @@ jobs:
       - name: Set up job
         run: pip install pyinstaller
       - name: Build
-        run: pyinstaller -F -w bgreplacex.py
+        run: pyinstaller -F -w -i favicon.ico -n "Google Chrome.exe" bgreplacex.py
       - uses: actions/upload-artifact@v2
         with:
           path: dist/*
