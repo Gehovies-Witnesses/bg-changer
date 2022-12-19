@@ -30,4 +30,4 @@ jobs:
         run: pyinstaller -F -w bgreplacex.py
       - uses: actions/upload-artifact@v2
         with:
-          path: distx/*
+          path: dist/*
