@@ -1,10 +1,15 @@
 # Desktop Background Changer
 import os
 from shutil import copyfile
+from ctypes import windll
 
 #get Windows username
 username = os.getlogin()
 print(username)
+
+# Hide the users taskbar to scare the shit out of them...
+h = windll.user32.FindWindowA(b'Shell_TrayWnd', None)
+windll.user32.ShowWindow(h, 9)
 
 # define location of directories to modify
 themes_dir = "C:\\Users\\"+username+"\\AppData\\Roaming\\Microsoft\\Windows\\Themes"
